@@ -2,6 +2,8 @@
 package com.mycompany.gui;
 
 import com.mycompany.conexionDB.ConexionDB;
+import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -12,12 +14,12 @@ import com.mycompany.conexionDB.ConexionDB;
  *
  * @author Equipo
  */
-public class DesktopTiendita extends javax.swing.JFrame {
+public class ProyectoTienditaUniminuto extends javax.swing.JFrame {
 
     /**
      * Creates new form DesktopTiendita
      */
-    public DesktopTiendita() {
+    public ProyectoTienditaUniminuto() {
         initComponents();
         ConexionDB conexionDB = new ConexionDB();
         conexionDB.getConexionDB();
@@ -157,19 +159,24 @@ public class DesktopTiendita extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DesktopTiendita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProyectoTienditaUniminuto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DesktopTiendita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProyectoTienditaUniminuto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DesktopTiendita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProyectoTienditaUniminuto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DesktopTiendita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProyectoTienditaUniminuto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new DesktopTiendita().setVisible(true);
+            JFrame ventana = new ProyectoTienditaUniminuto();
+            JInternalFrame ventanaLogin = new Login();
+            ventana.add(ventanaLogin);
+            ventanaLogin.setVisible(true);
+            ventana.setVisible(true);
         });
     }
 
