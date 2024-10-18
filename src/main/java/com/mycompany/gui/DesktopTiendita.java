@@ -34,8 +34,6 @@ public class DesktopTiendita extends javax.swing.JFrame {
 
         panelDesktop = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuTiendita = new javax.swing.JMenu();
         itemRegistrarCliente = new javax.swing.JMenuItem();
@@ -59,12 +57,6 @@ public class DesktopTiendita extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 102, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/png-transparent-computer-icons-supermarket-supermercado-angle-building-text-thumbnail-removebg-preview.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 402, 340));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/blue-2384333_960_720.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 410));
 
         mnuTiendita.setText("Tiendita");
         mnuTiendita.addActionListener(new java.awt.event.ActionListener() {
@@ -186,8 +178,6 @@ public class DesktopTiendita extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemFacturar;
     private javax.swing.JMenuItem itemRegistrar;
     private javax.swing.JMenuItem itemRegistrarCliente;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
