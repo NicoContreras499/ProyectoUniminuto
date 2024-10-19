@@ -25,7 +25,7 @@ public class ProductoDao {
     }
     public ResultSet queryProcuto(){
         Connection myCon = this.conexionDB.getConexionDB();
-        String query = "SELECT * FROM productos; ";
+        String query = "SELECT * FROM producto WHERE pro_estatus = 1; ";
           try {
               this.statement = myCon.prepareStatement(query);
               this.resultSet = this.statement.executeQuery();
@@ -40,7 +40,9 @@ public class ProductoDao {
     public void registrarProducto (Producto producto){
         //ctrl + espacio en myCon para importar
         Connection myCon = this.conexionDB.getConexionDB();
-        String query = "INSERT INTO productos VALUES (NULL,?,?,?);";
+        String query = "INSERT INTO `producto"
+                + "`(`pro_id`, `pro_nombre`, `pro_descripcion`, `pro_estatus`)"
+                + " VALUES (null,?,?,?);";
         try {
             if(this.statement==null){
                 this.statement = myCon.prepareStatement(query);

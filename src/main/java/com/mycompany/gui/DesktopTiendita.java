@@ -2,8 +2,6 @@
 package com.mycompany.gui;
 
 import com.mycompany.conexionDB.ConexionDB;
-import javax.swing.JFrame;
-import javax.swing.JInternalFrame;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -14,12 +12,12 @@ import javax.swing.JInternalFrame;
  *
  * @author Equipo
  */
-public class ProyectoTienditaUniminuto extends javax.swing.JFrame {
+public class DesktopTiendita extends javax.swing.JFrame {
 
     /**
      * Creates new form DesktopTiendita
      */
-    public ProyectoTienditaUniminuto() {
+    public DesktopTiendita() {
         initComponents();
         ConexionDB conexionDB = new ConexionDB();
         conexionDB.getConexionDB();
@@ -35,7 +33,6 @@ public class ProyectoTienditaUniminuto extends javax.swing.JFrame {
     private void initComponents() {
 
         panelDesktop = new javax.swing.JDesktopPane();
-        jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuTiendita = new javax.swing.JMenu();
         itemRegistrarCliente = new javax.swing.JMenuItem();
@@ -50,15 +47,12 @@ public class ProyectoTienditaUniminuto extends javax.swing.JFrame {
         panelDesktop.setLayout(panelDesktopLayout);
         panelDesktopLayout.setHorizontalGroup(
             panelDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 481, Short.MAX_VALUE)
         );
         panelDesktopLayout.setVerticalGroup(
             panelDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 357, Short.MAX_VALUE)
         );
-
-        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         mnuTiendita.setText("Tiendita");
         mnuTiendita.addActionListener(new java.awt.event.ActionListener() {
@@ -105,16 +99,15 @@ public class ProyectoTienditaUniminuto extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelDesktop))
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelDesktop)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
                 .addComponent(panelDesktop)
                 .addContainerGap())
         );
@@ -135,6 +128,10 @@ public class ProyectoTienditaUniminuto extends javax.swing.JFrame {
 
     private void itemActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemActualizarActionPerformed
         // TODO add your handling code here:
+        ActualizarProducto producto = new ActualizarProducto();
+        panelDesktop.add(producto);
+        producto.show();
+        
     }//GEN-LAST:event_itemActualizarActionPerformed
 
     private void itemFacturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemFacturarActionPerformed
@@ -159,24 +156,19 @@ public class ProyectoTienditaUniminuto extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ProyectoTienditaUniminuto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DesktopTiendita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ProyectoTienditaUniminuto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DesktopTiendita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ProyectoTienditaUniminuto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DesktopTiendita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ProyectoTienditaUniminuto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DesktopTiendita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            JFrame ventana = new ProyectoTienditaUniminuto();
-            JInternalFrame ventanaLogin = new Login();
-            ventana.add(ventanaLogin);
-            ventanaLogin.setVisible(true);
-            ventana.setVisible(true);
+            new DesktopTiendita().setVisible(true);
         });
     }
 
@@ -187,7 +179,6 @@ public class ProyectoTienditaUniminuto extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemRegistrarCliente;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu mnuTiendita;
     private javax.swing.JDesktopPane panelDesktop;
     // End of variables declaration//GEN-END:variables
